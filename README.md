@@ -1,3 +1,6 @@
 # Bitboat 2016
-# Deon Thomas 
-# Candace Nelson
+
+### Collaborators
+- Candace Nelson
+- Deon Thomas
+- Haopei Yang
