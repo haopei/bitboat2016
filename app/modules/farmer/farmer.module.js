@@ -8,19 +8,17 @@
                 .state('farmer', {
                     url: '/farmer',
                     templateUrl: 'app/modules/farmer/farmer.html',
-                    controller: 'FarmerController',
-                    controllerAs: 'vm'
                 })
                 .state('farmer.dash', {
                     url: '/dash',
                     templateUrl: 'app/modules/farmer/dash/farmer-dash.html',
-                    controller: 'FarmerController',
+                    controller: 'FarmerDashController',
                     controllerAs: 'vm'
                 })
                 .state('farmer.profile', {
                     url: '/profile/:profileId',
                     templateUrl: 'app/modules/farmer/profile/farmer-profile.html',
-                    controller: 'FarmerController',
+                    controller: 'FarmerProfileController',
                     controllerAs: 'vm'
                 });
         });

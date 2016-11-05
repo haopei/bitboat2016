@@ -8,13 +8,14 @@
         <title>Farmer's Marketing Platform</title>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css"> -->
         <!-- Material Lite -->
         <link rel="stylesheet" href="/node_modules/material-design-lite/dist/material.green-orange.min.css">
         <link rel="stylesheet" href="app/assets/css/main.css">
     </head>
     <body>
 
+        <!-- Main UI-View -->
         <ui-view></ui-view>
 
         <script src="node_modules/material-design-lite/dist/material.min.js" charset="utf-8"></script>
@@ -30,6 +31,8 @@
         <!-- Data -->
         <script src="app/modules/data/data.module.js" charset="utf-8"></script>
         <script src="app/modules/data/produce-data.js" charset="utf-8"></script>
+        <script src="app/modules/data/buyer-data.js" charset="utf-8"></script>
+        <script src="app/modules/data/farmer-data.js" charset="utf-8"></script>
 
         <!-- Auth -->
         <script src="app/modules/auth/auth.module.js" charset="utf-8"></script>
@@ -40,16 +43,19 @@
 
         <!-- Farmer -->
         <script src="app/modules/farmer/farmer.module.js" charset="utf-8"></script>
-        <script src="app/modules/farmer/farmer.js" charset="utf-8"></script>
+        <script src="app/modules/farmer/profile/farmer-profile.js" charset="utf-8"></script>
+        <script src="app/modules/farmer/dash/farmer-dash.js" charset="utf-8"></script>
 
         <!-- Order -->
         <script src="app/modules/order/order.module.js" charset="utf-8"></script>
         <script src="app/modules/order/order.js" charset="utf-8"></script>
+        <script src="app/modules/order/create/order-create.js" charset="utf-8"></script>
 
 
         <!-- Produce -->
         <script src="app/modules/produce/produce.module.js" charset="utf-8"></script>
-        <script src="app/modules/produce/produce.js" charset="utf-8"></script>
+        <script src="app/modules/produce/item/produce-item.js" charset="utf-8"></script>
+        <script src="app/modules/produce/all/produce-all.js" charset="utf-8"></script>
 
         <!-- Chart.js -->
         <script src="/node_modules/chart.js/dist/Chart.min.js" charset="utf-8"></script>

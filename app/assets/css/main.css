@@ -4,10 +4,56 @@
     margin: 10px;
 }
 
+.hero--front {
+    background: url('https://storage.googleapis.com/bitboat2016/vegetables-resized.jpg') center/cover;
+    box-shadow: #333 0 0 101px 23px inset;
+    text-align: center;
+    padding: 100px 10px;
+}
+
+.hero--front__title h3{
+    color: yellow;
+    text-shadow: #333 2px 2px 5px;
+}
+
+.hero--front__button {
+    margin: 10px;
+}
+
 .hero--produce-item {
     background: #ddd;
 }
 
 .hero__title--produce-item {
     padding: 100px 20px;
+}
+
+.header {
+    background: #f5f5f5;
+    padding: 20px 0;
+}
+
+.page-header {
+    background: #56ab2f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #56ab2f , #a8e063); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.produce-card {
+    float: left;
+    margin: 0 20px 20px 0
+}
+
+.produce-card__img-container {
+    height: 200px;
+}
+
+
+
+/**
+ * Material Overwrite
+ */
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+    color: #fff;
 }

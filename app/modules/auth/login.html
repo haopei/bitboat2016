@@ -1,2 +1,26 @@
 <ng-include src="'app/modules/layout/header.html'"></ng-include>
-{{vm.message}}
+
+<div class="login-page">
+
+    <div class="login-page__form">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form ng-submit="vm.login(vm.loginCredentials)">
+
+                        <div class="form-group">
+                            <label for="loginEmail">Email address</label>
+                            <input type="email" ng-model="vm.loginCredentials.email" class="form-control" id="loginEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" ng-model="vm.loginCredentials.password" class="form-control" id="loginPassword" placeholder="Password">
+                        </div>
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

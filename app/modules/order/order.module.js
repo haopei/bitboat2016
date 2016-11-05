@@ -26,6 +26,12 @@
                     templateUrl: 'app/modules/order/item/order-item.html',
                     controller: 'OrderController',
                     controllerAs: 'vm'
+                })
+                .state('order.create', {
+                    url: '/create/:produceId',
+                    templateUrl: 'app/modules/order/create/order-create.html',
+                    controller: 'CreateOrderController',
+                    controllerAs: 'vm'
                 });
         });
 }());

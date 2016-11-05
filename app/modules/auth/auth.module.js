@@ -8,6 +8,12 @@
 
         function AuthController() {
             var vm = this;
-            vm.message = 'login page is connected';
+            vm.loginCredentials = {};
+            vm.login = login;
+
+            function login() {
+                console.log(vm.loginCredentials);
+                // TODO: make http request to login
+            }
         }
 }());

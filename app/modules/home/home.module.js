@@ -5,9 +5,9 @@
         .module('app.home', [])
         .controller('HomeController', HomeController);
 
-        HomeController.$inject = [];
+        HomeController.$inject = ['orderdata'];
 
-        function HomeController() {
+        function HomeController(orderdata) {
             var vm = this;
             vm.title = "hi there";
         }

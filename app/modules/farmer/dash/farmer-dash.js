@@ -1,5 +1,3 @@
-
-
 (function() {
     'use strict';
 
@@ -10,7 +8,7 @@
 
     angular
         .module('app.farmer')
-        .controller('FarmerController', FarmerController);
+        .controller('FarmerDashController', FarmerController);
 
         FarmerController.$inject = [];
 

@@ -1,0 +1,32 @@
+<!-- produce_id, quantity, price, location_id, active (boolean) -->
+
+
+<div class="create-order">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form ng-submit="vm.createOrder(vm.createOrderData)">
+                    <!-- TODO: incomplete fields -->
+                    <div class="form-group">
+                        <label for="">Select Produce to Order</label>
+                        <select name="select" class="form-control">
+                            <option ng-repeat="p in vm.allProduce" ng-model="vm.createOrderData.produceId" value="{{p.id}}">{{p.name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newOrderQuantity">Quantity Demanded</label>
+                        <input type="number" class="form-control" id="newOrderQuantity" placeholder="price per lb">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newOrderPrice">Buying Price (per lb)</label>
+                        <input type="number" class="form-control" id="newOrderPrice" placeholder="price per lb">
+                    </div>
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Create Order</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
