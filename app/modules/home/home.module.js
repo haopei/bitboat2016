@@ -10,7 +10,6 @@
         function HomeController() {
             var vm = this;
             vm.title = "hi there";
-            console.log('vm', vm);
         }
 
 }());

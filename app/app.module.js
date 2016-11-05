@@ -4,7 +4,9 @@
     angular
         .module('app', [
             'app.core',
-            'app.home'
+            'app.home',
+            'app.auth',
+            'app.buyer'
         ])
         .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
@@ -13,6 +15,12 @@
                     url: '/',
                     templateUrl: 'app/modules/home/home.html',
                     controller: 'HomeController',
+                    controllerAs: 'vm'
+                })
+                .state('login', {
+                    url: '/login',
+                    templateUrl: 'app/modules/auth/login.html',
+                    controller: 'AuthController',
                     controllerAs: 'vm'
                 });
 
