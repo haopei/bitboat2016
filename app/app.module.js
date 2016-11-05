@@ -9,7 +9,8 @@
             'app.buyer',
             'app.farmer',
             'app.produce',
-            'app.order'
+            'app.order',
+            'app.data'
         ])
         .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 

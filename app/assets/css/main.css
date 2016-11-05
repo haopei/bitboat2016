@@ -3,3 +3,11 @@
     padding: 10px;
     margin: 10px;
 }
+
+.hero--produce-item {
+    background: #ddd;
+}
+
+.hero__title--produce-item {
+    padding: 100px 20px;
+}
