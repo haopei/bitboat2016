@@ -32,8 +32,9 @@
 
         /**
          * return a list of all produce entities
+         * requires: farmerId
          */
-        function getProducePerFarmer() {
+        function getProducePerFarmer(farmerId) {
             var url = 'http://localhost:8000/';
             var resp =  $http({
                 url: url,

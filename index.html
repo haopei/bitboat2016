@@ -2,15 +2,22 @@
 <html ng-app="app">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>Farmer's Marketing Platform</title>
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+        <!-- Material Lite -->
+        <link rel="stylesheet" href="/node_modules/material-design-lite/dist/material.green-orange.min.css">
         <link rel="stylesheet" href="app/assets/css/main.css">
     </head>
     <body>
 
         <ui-view></ui-view>
 
+        <script src="node_modules/material-design-lite/dist/material.min.js" charset="utf-8"></script>
         <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
         <script src="node_modules/angular/angular.min.js" charset="utf-8"></script>
@@ -35,12 +42,17 @@
         <script src="app/modules/farmer/farmer.module.js" charset="utf-8"></script>
         <script src="app/modules/farmer/farmer.js" charset="utf-8"></script>
 
+        <!-- Order -->
+        <script src="app/modules/order/order.module.js" charset="utf-8"></script>
+        <script src="app/modules/order/order.js" charset="utf-8"></script>
+
+
         <!-- Produce -->
         <script src="app/modules/produce/produce.module.js" charset="utf-8"></script>
         <script src="app/modules/produce/produce.js" charset="utf-8"></script>
 
-        <!-- Order -->
-        <script src="app/modules/order/order.module.js" charset="utf-8"></script>
-        <script src="app/modules/order/order.js" charset="utf-8"></script>
+        <!-- Chart.js -->
+        <script src="/node_modules/chart.js/dist/Chart.min.js" charset="utf-8"></script>
+
     </body>
 </html>
