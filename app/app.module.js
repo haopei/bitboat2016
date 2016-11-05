@@ -6,7 +6,8 @@
             'app.core',
             'app.home',
             'app.auth',
-            'app.buyer'
+            'app.buyer',
+            'app.farmer'
         ])
         .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 

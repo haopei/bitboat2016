@@ -13,7 +13,11 @@
                 })
                 .state('buyer.dash', {
                     url: '/dash',
-                    templateUrl: 'app/modules/buyer/dash/dash.html'
+                    templateUrl: 'app/modules/buyer/dash/buyer-dash.html'
+                })
+                .state('buyer.profile', {
+                    url: '/dash/:profileId',
+                    templateUrl: 'app/modules/buyer/profile/buyer-profile.html'
                 });
         });
 }());
