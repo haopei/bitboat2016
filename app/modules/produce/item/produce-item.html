@@ -1,19 +1,9 @@
-<!-- <div class="state-box">
-    <h4>state: produce.item</h4>
-    <ul>
-        <p>Inside produce.item:</p>
-        <li>generic produce details</li>
-        <li>demand graph</li>
-        <li>'I farm these' button</li>
-        <li>generic photo</li>
-    </ul>
-</div> -->
-
 <div class="hero hero--produce-item" style="background: url('http://localhost:8000/{{vm.produce.image_url}}') center/cover;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 text-center">
                 <h2 class="hero__title--produce-item">{{vm.produce.name}}</h2>
+                <a ui-sref="order.create({produceId: vm.produce.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Order {{vm.produce.name}}</a>
             </div>
         </div>
     </div>
@@ -23,8 +13,10 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                graph goes here
-
+                <div class="produce-chart">
+                    <h4>Total Demand and Supply of {{vm.produce.name}} in 2016</h4>
+                    <canvas id="produceChart" width="400" height="400"></canvas>
+                </div>
             </div>
         </div>
     </div>

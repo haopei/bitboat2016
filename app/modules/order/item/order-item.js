@@ -3,11 +3,11 @@
 
     angular
         .module('app.order')
-        .controller('OrderController', OrderController);
+        .controller('OrderItemController', OrderItemController);
 
-        OrderController.$inject = [];
+        OrderItemController.$inject = [];
 
-        function OrderController() {
+        function OrderItemController() {
             var vm = this;
             vm.message = 'Order is hooked up';
         }

@@ -48,8 +48,15 @@
     height: 200px;
 }
 
+.produce-chart {
+    width: 500px;
+}
 
 
+.order-form {
+    margin: 20px auto;
+    max-width: 500px;
+}
 /**
  * Material Overwrite
  */
