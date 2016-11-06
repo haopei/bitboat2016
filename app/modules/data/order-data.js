@@ -12,9 +12,37 @@
     function orderdata($http) {
         var service = {
             createOrder: createOrder,
-            getAllOrders: getAllOrders
+            getAllOrders: getAllOrders,
+            getOrderById: getOrderById,
+            getOrdersByUserId: getOrdersByUserId
         };
         return service;
+
+        /**
+         * Get al orders by author
+         */
+
+        function getOrdersByUserId(userId) {
+            var url = 'http://localhost:8000/api/v1/user/' + userId + '/orders';
+            var resp =  $http({
+                url: url,
+                method: 'GET'
+            });
+            return resp;
+        }
+
+        /**
+         * Get orders by order id
+         */
+        function getOrderById(orderId) {
+            var url = 'http://localhost:8000/api/v1/orders/' + orderId;
+            var resp =  $http({
+                url: url,
+                method: 'GET'
+            });
+
+            return resp;
+        }
 
         /**
          * All Orders
@@ -23,10 +51,9 @@
              var url = 'http://localhost:8000/api/v1/orders/all';
              var resp =  $http({
                  url: url,
-                 method: 'GET',
-                 // withCredentials: false
+                 method: 'GET'
              });
-             // resp is a promise object
+
              return resp;
          }
 
@@ -39,10 +66,9 @@
             var resp =  $http({
                 url: url,
                 data: createOrderData,
-                method: 'POST',
-                // withCredentials: false
+                method: 'POST'
             });
-            // resp is a promise object
+
             return resp;
         }
 

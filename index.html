@@ -5,18 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <title>Farmer's Marketing Platform</title>
+        <title>The Food Basket</title>
+        <!-- <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Pacifico" rel="stylesheet"> -->
         <!-- Bootstrap -->
         <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css"> -->
         <!-- Material Lite -->
         <link rel="stylesheet" href="/node_modules/material-design-lite/dist/material.green-orange.min.css">
         <link rel="stylesheet" href="app/assets/css/main.css">
+
     </head>
     <body>
 
         <!-- Main UI-View -->
         <ui-view></ui-view>
+        <ng-include src="'app/modules/layout/footer.html'"></ng-include>
 
         <script src="node_modules/material-design-lite/dist/material.min.js" charset="utf-8"></script>
         <script src="node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
@@ -35,13 +38,16 @@
         <script src="app/modules/data/farmer-data.js" charset="utf-8"></script>
         <script src="app/modules/data/order-data.js" charset="utf-8"></script>
         <script src="app/modules/data/stats-data.js" charset="utf-8"></script>
+        <script src="app/modules/data/bid-data.js" charset="utf-8"></script>
+        <script src="app/modules/data/getRole.js" charset="utf-8"></script>
 
         <!-- Auth -->
         <script src="app/modules/auth/auth.module.js" charset="utf-8"></script>
 
         <!-- Buyer -->
         <script src="app/modules/buyer/buyer.module.js" charset="utf-8"></script>
-        <script src="app/modules/buyer/buyer.js" charset="utf-8"></script>
+        <script src="app/modules/buyer/profile/buyer-profile.js" charset="utf-8"></script>
+        <script src="app/modules/buyer/dash/buyer-dash.js" charset="utf-8"></script>
 
         <!-- Farmer -->
         <script src="app/modules/farmer/farmer.module.js" charset="utf-8"></script>
@@ -54,6 +60,10 @@
         <script src="app/modules/order/create/order-create.js" charset="utf-8"></script>
         <script src="app/modules/order/all/order-all.js" charset="utf-8"></script>
 
+        <!-- Bid -->
+        <script src="app/modules/bid/bid.module.js" charset="utf-8"></script>
+        <script src="app/modules/bid/create/bid-create.js" charset="utf-8"></script>
+        <script src="app/modules/bid/page/bid-page.js" charset="utf-8"></script>
 
         <!-- Produce -->
         <script src="app/modules/produce/produce.module.js" charset="utf-8"></script>

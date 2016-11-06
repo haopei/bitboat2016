@@ -12,11 +12,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2>All Produce</h2>
+                    <h4>All Produce</h4>
                 </div>
             </div>
         </div>
     </div>
+    <br>
 
     <div class="container">
         <div class="row">
@@ -31,7 +32,8 @@
                             <!-- TODO: responsive grid -->
                             </div>
                             <div class="mdl-card__actions mdl-card--border">
-                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View</a>
+                                <a ui-sref="produce.item({produceId: p.id})" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Trends</a>
+                                <a ui-sref="order.create({produceId: p.id})" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Make Order</a>
                             </div>
                         </div>
                     </a>

@@ -1,12 +1,45 @@
-<div class="state-box">
-    <h4>state: order.item</h4>
-    {{vm.message}}
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4>Market Demand</h4>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <ul>
-        <p>Insider order.item</p>
-        <ul>
-            <li>List of all orders by all buyers</li>
-            <li>With search/filter functionality</li>
-        </ul>
-    </ul>
+
+<div class="hero hero--produce-item" style="background: url('http://localhost:8000/{{vm.order.produce_image_url}}') center/cover;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+
+                <h2 class="hero__title--produce-item">
+                    {{vm.order.quantity}} <small style="color: #fff;">lbs</small> <br> {{vm.order.produce_name}}
+                </h2>
+
+                <br>
+                <a style="margin: 0 0 20px;" ui-sref="bid.create({orderId: vm.order.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Supply Your {{vm.order.produce_name}}</a>
+                <br>
+            </div>
+        </div>
+
+        <div class="order-details">
+            <div class="row">
+                <div class="col-sm-6"><strong>Location</strong> Region {{vm.order.region}}, {{vm.order.country}}</div>
+                <div class="col-sm-6"><strong>Asking Price:</strong> {{vm.order.price | currency}} per lb</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="bids-per-order">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                BIDS GO HERE IF BUYER
+            </div>
+        </div>
+    </div>
 </div>

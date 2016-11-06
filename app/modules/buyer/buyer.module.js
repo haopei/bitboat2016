@@ -8,16 +8,18 @@
                 .state('buyer', {
                     url: '/buyer',
                     templateUrl: 'app/modules/buyer/buyer.html',
-                    controller: 'BuyerController',
-                    controllerAs: 'vm'
                 })
                 .state('buyer.dash', {
                     url: '/dash',
-                    templateUrl: 'app/modules/buyer/dash/buyer-dash.html'
+                    templateUrl: 'app/modules/buyer/dash/buyer-dash.html',
+                    controller: 'BuyerDashController',
+                    controllerAs: 'vm'
                 })
                 .state('buyer.profile', {
-                    url: '/dash/:profileId',
-                    templateUrl: 'app/modules/buyer/profile/buyer-profile.html'
+                    url: '/:profileId',
+                    templateUrl: 'app/modules/buyer/profile/buyer-profile.html',
+                    controller: 'BuyerProfileController',
+                    controllerAs: 'vm'
                 });
         });
 }());

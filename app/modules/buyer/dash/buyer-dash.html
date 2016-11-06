@@ -9,15 +9,49 @@
 
 <div class="buyer-dash">
 
-    <div class="buyer-orders">
+    <div class="page-header">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
-
+                <div class="col-sm-12">
+                    <h4>My Dash</h4>
                 </div>
             </div>
         </div>
     </div>
 
 
+    <div class="buyer-orders">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>My Orders</h5>
+                    <table class="mdl-data-table mdl-js-data-table">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Produce</th>
+                                <th>Quantity</th>
+                                <th>Price/Budget</th>
+                                <th class="mdl-data-table__cell--non-numeric">Location</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="order in vm.allOrders">
+
+                                    <div>
+                                        <td class="mdl-data-table__cell--non-numeric">{{order.produce_name}}</td>
+                                        <td>{{order.quantity}}</td>
+                                        <td>{{order.price | currency}}</td>
+                                        <td class="mdl-data-table__cell--non-numeric">{{order.address}}, {{order.country}}</td>
+                                        <td><a ui-sref="order.item({orderId: order.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">View Order</a></td>
+                                    </div>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

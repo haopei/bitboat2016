@@ -5,9 +5,9 @@
         .module('app.order')
         .controller('CreateOrderController', CreateOrderController);
 
-    CreateOrderController.$inject = ['$stateParams', 'producedata', 'orderdata'];
+    CreateOrderController.$inject = ['$state', '$stateParams', 'producedata', 'orderdata'];
 
-    function CreateOrderController($stateParams, producedata, orderdata) {
+    function CreateOrderController($state, $stateParams, producedata, orderdata) {
         var vm = this;
         // vm.allProduce = [];
         // vm.getAllProduce = getAllProduce;
@@ -32,7 +32,9 @@
             orderdata
                 .createOrder(vm.createOrderData)
                 .then(function(resp) {
-                    console.log(resp);
+                    if (resp.status == 200) {
+                        $state.go('order.item', { orderId: resp.data.id });
+                    }
                 });
         }
 

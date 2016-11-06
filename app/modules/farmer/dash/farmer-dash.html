@@ -1,8 +1,70 @@
-<div class="state-box">
-    <h4>state: farmer.dash</h4>
-    <ul>
-        <p>Inside farmer.dash</p>
-        <li>A list of bids made per farmer</li>
-        <!-- TODO -->
-    </ul>
+<div class="farmer-dash">
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>My Dash</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h5>My Bids</h5>
+
+                <table class="mdl-data-table mdl-js-data-table">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Produce</th>
+                            <th>Quantity (lbs)</th>
+                            <th>Price</th>
+                            <th class="mdl-data-table__cell--non-numeric">Location</th>
+                            <!-- <th></th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="bid in vm.farmerBids">
+
+                                <div>
+                                    <td class="mdl-data-table__cell--non-numeric">{{bid.produce_name}}</td>
+                                    <td>{{bid.quantity}}</td>
+                                    <td>{{bid.price | currency}}</td>
+                                    <td class="mdl-data-table__cell--non-numeric">Region {{bid.region}}, {{bid.country}}</td>
+                                    <!-- <td><a ui-sref="bid.page({bidId: bid.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">View Bid</a></td> -->
+                                </div>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <br>
+
+                <!-- <div class="bid-card" ng-repeat="bid in vm.farmerBids">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6">
+                            {{bid.produce_name}}
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            {{bid.quantity}} lbs
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            {{bid.price | currency}}
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            Region {{bid.region}}, {{bid.country}}
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            {{bid.created}}
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
 </div>

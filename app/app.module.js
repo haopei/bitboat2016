@@ -6,11 +6,12 @@
             'app.core',
             'app.home',
             'app.auth',
+            'app.order',
             'app.buyer',
             'app.farmer',
             'app.produce',
-            'app.order',
-            'app.data'
+            'app.data',
+            'app.bid'
         ])
         .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
@@ -29,5 +30,20 @@
                 });
 
             $urlRouterProvider.otherwise('/');
-        });
+        })
+        .controller('HeaderController', HeaderController);
+
+        function HeaderController($window, $scope) {
+
+            if ($window.sessionStorage.user_id) {
+                $scope.auth = true;
+
+                $scope.username = $window.sessionStorage.username;
+                $scope.role = $window.sessionStorage.role;
+
+                if ($scope.role == 'buyer') {
+                    $scope.logged_in_as_buyer = true;
+                }
+            }
+        }
 }());

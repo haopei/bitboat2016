@@ -10,10 +10,29 @@
         .module('app.farmer')
         .controller('FarmerDashController', FarmerController);
 
-        FarmerController.$inject = [];
+        FarmerController.$inject = ['$window', 'biddata'];
 
-        function FarmerController() {
+        function FarmerController($window, biddata) {
             var vm = this;
-            vm.message = 'farmer controller linked up!';
+            vm.getBidsPerFarmer = getBidsPerFarmer;
+            vm.farmerBids = [];
+
+
+            activate();
+
+            function activate() {
+                vm.farmerId = $window.sessionStorage.user_id;
+                vm.getBidsPerFarmer();
+            }
+
+            function getBidsPerFarmer() {
+                biddata
+                    .getBidsPerUser(vm.farmerId)
+                    .then(function(resp) {
+                        vm.farmerBids = resp.data;
+                    });
+            }
+
+
         }
 }());
