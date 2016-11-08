@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2 class="hero__title--produce-item">Order {{vm.produce.name}}</h2>
+                    <h2 class="hero__title--produce-item">Buy {{vm.produce.name}}</h2>
                 </div>
             </div>
         </div>
@@ -17,12 +17,12 @@
             <div class="col-sm-12">
                 <form ng-submit="vm.createOrder(vm.createOrderData)" class="order-form">
                     <div class="form-group">
-                        <label for="newOrderQuantity">Quantity Demanded</label>
+                        <label for="newOrderQuantity">How much mangoes do you want to buy?</label>
                         <input type="number" ng-model="vm.createOrderData.quantity" class="form-control" id="newOrderQuantity" placeholder="Quantity in lbs">
                     </div>
 
                     <div class="form-group">
-                        <label for="newOrderPrice">Buying Price (per lb)</label>
+                        <label for="newOrderPrice">How much do you want to pay per pound?</label>
                         <input type="number" ng-model="vm.createOrderData.price" class="form-control" id="newOrderPrice" placeholder="Price per lb">
                     </div>
 

@@ -34,11 +34,36 @@
     </div>
 </div>
 
-<div class="bids-per-order">
+<div class="bids-per-order" ng-show="{{vm.noBids}}">
+
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                BIDS GO HERE IF BUYER
+                <h5>Bids</h5>
+                <table class="mdl-data-table mdl-js-data-table">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Price</th>
+                            <th>Quantity</th>
+                            <th class="mdl-data-table__cell--non-numeric">Location</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="bids in vm.bidsPerOrder">
+
+                                <div>
+                                    <td class="mdl-data-table__cell--non-numeric">{{bids.price | currency}}</td>
+                                    <td>{{bids.quantity}} lbs</td>
+                                    <td class="mdl-data-table__cell--non-numeric">{{bids.address}}, {{bids.country}}</td>
+                                    <td><a ui-sref="bid.item({bidsId: order.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">View Bid</a></td>
+                                </div>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>

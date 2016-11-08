@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h5>My Orders</h5>
+                    <h5>My Recent Orders</h5>
                     <table class="mdl-data-table mdl-js-data-table">
                         <thead>
                             <tr>
@@ -40,7 +40,7 @@
 
                                     <div>
                                         <td class="mdl-data-table__cell--non-numeric">{{order.produce_name}}</td>
-                                        <td>{{order.quantity}}</td>
+                                        <td>{{order.quantity}} lb</td>
                                         <td>{{order.price | currency}}</td>
                                         <td class="mdl-data-table__cell--non-numeric">{{order.address}}, {{order.country}}</td>
                                         <td><a ui-sref="order.item({orderId: order.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">View Order</a></td>

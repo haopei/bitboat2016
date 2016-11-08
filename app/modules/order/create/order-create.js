@@ -32,9 +32,7 @@
             orderdata
                 .createOrder(vm.createOrderData)
                 .then(function(resp) {
-                    if (resp.status == 200) {
-                        $state.go('order.item', { orderId: resp.data.id });
-                    }
+                    $state.go('order.item', { orderId: resp.data.id });
                 });
         }
 

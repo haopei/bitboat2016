@@ -4,8 +4,8 @@
             <div class="col-sm-12 text-center">
                 <h2 class="hero__title--produce-item">{{vm.produce.name}}</h2>
                 <br>
-                <a ui-sref="order.create({produceId: vm.produce.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Order {{vm.produce.name}}</a>
-                <br><br>
+                <a ui-sref="order.create({produceId: vm.produce.id})" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Buy {{vm.produce.name}}</a>
+                <br><br> <br><br>
 
             </div>
         </div>
@@ -15,23 +15,14 @@
 <div class="produce-item__graph">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-2"> </div>
+            <div class="col-sm-8">
                 <div class="produce-chart">
                     <h4>Total Demand and Supply of {{vm.produce.name}} in 2016</h4>
                     <canvas id="produceChart" width="400" height="400"></canvas>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="produce-item__">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                list of all cucumber suppliers organised by capacity (or sort by in your area)
-            </div>
+            <div class="col-sm-2"> </div>
         </div>
     </div>
 </div>

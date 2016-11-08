@@ -4,6 +4,14 @@
     margin: 10px;
 }
 
+.footer {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'Pacifico';
+}
+
 .welcome {
     background: #fff;
 }
@@ -14,7 +22,7 @@
 
 .hero--front {
     background: url('https://storage.googleapis.com/bitboat2016/vegetables-resized.jpg') center/cover;
-    box-shadow: #333 0 0 101px 23px inset;
+    /*box-shadow: #333 0 0 101px 23px inset;*/
     text-align: center;
     padding: 100px 10px;
 }
@@ -35,13 +43,14 @@
 .hero__title--produce-item {
     padding: 20px 40px;
     display: inline-block;
-    margin: 70px auto 20px;
+    margin: 70px auto;
     background: #56ab2f; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #56ab2f , #a8e063); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 5px;
     box-shadow: #000 1px 1px 3px;
     color: #fff;
+    text-transform: capitalize;
 }
 
 .header {
@@ -60,6 +69,8 @@
 
 .page-header h4 {
     font-family: 'Pacifico';
+    color: #fff;
+    text-shadow: #333 1px 1px 1px;
 }
 
 
@@ -95,4 +106,9 @@
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
     color: #fff;
+    font-size: 1.2em;
+}
+
+.mdl-card__title-text {
+    text-transform: capitalize;
 }

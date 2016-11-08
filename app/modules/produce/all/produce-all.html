@@ -32,8 +32,8 @@
                             <!-- TODO: responsive grid -->
                             </div>
                             <div class="mdl-card__actions mdl-card--border">
-                                <a ui-sref="produce.item({produceId: p.id})" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">View Trends</a>
-                                <a ui-sref="order.create({produceId: p.id})" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Make Order</a>
+                                <a ui-sref="produce.item({produceId: p.id})" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"><i class="fa fa-area-chart" aria-hidden="true"></i> See Trends</a>
+                                <a ui-sref="order.create({produceId: p.id})" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy</a>
                             </div>
                         </div>
                     </a>
@@ -41,7 +41,4 @@
             </div>
         </div>
     </div>
-
 </div>
-
-{{vm.allProduce}}

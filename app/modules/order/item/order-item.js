@@ -25,6 +25,7 @@
                 biddata
                     .getBidsPerOrder(vm.order.id)
                     .then(function(resp) {
+                        vm.bidsPerOrder = resp.data;
                         console.log(resp);
                     });
             }
@@ -34,8 +35,15 @@
                     .getOrderById($stateParams.orderId)
                     .then(function(resp) {
                         console.log(resp.data);
-                        vm.order = resp.data;
-                        vm.getBidsPerOrder();
+                        if (resp.status == 200) {
+                            vm.order = resp.data;
+                            vm.getBidsPerOrder();
+                        }
+                        else {
+                            vm.noBids = true;
+                        }
+
+
                     });
             }
 
